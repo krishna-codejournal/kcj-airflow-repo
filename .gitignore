@@ -1,0 +1,39 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+venv
+.venv*/
+.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+# VSCode settings
+.vscode/
+# ChromaDB persistent directory
+chroma_db/chroma_db_test/
+# FAISS index directory
+FAISS/faiss_index/ 
+FAISS/faiss_index/*
+
+# Logs
+logs/*.log
+logs/   
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+
+# Environment variables
+# .env    
+# .env.local
+# .env.*.local
+
+
