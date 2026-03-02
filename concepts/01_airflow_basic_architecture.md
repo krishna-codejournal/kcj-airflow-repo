@@ -2,6 +2,10 @@
 
 ## Overview
 
+Apache Airflow is an open source platform to programmatically author, schedule and monitor workflows.
+
+Apache Airflow is a tool that helps you create, organize, and keep track of your data tasks automatically. It's like a very smart to-do list for your data work that runs itself. 
+
 Apache Airflow's architecture is composed of several interconnected components that work together to schedule, execute, and monitor workflows. This document walks through each component and how they interact.
 
 ---
@@ -14,11 +18,16 @@ Apache Airflow's architecture is composed of several interconnected components t
 | **DAGs** | Files | Python workflow definitions |
 | **Web Server** | Service | Serves the UI, reads DAGs and DB |
 | **User Interface** | Frontend | Dashboard for monitoring and control |
+| **DAG File Processor** | Parser | Parses DAG files and serializes them into the metadata database|
+| **API Server** | Endpoint | The API server provides endpoints for task operations and serving the UI|
 | **Scheduler** | Service | Parses DAGs, triggers task instances |
 | **Executor** | Plugin/Service | Determines *how* tasks are run |
 | **Worker(s)** | Process(es) | Actually executes task code |
+| **Queue** | Queue | The Queue is a list of tasks waiting to be executed|
+| **Triggerer** | Triggerer | The Triggerer is responsible for managing deferrable tasks- tasks that wait for external events.|
 | **Metadata DB (Postgres)** | Database | Source of truth for all state |
 | **airflow.cfg** | Config file | Global configuration for all components |
+
 
 ---
 ![alt text](images/architect.png)

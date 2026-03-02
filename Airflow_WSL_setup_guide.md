@@ -190,6 +190,8 @@ airflow users create \
 ```
 
 ------------------------------------------------------------------------
+cd ~/projects/kcj-airflow-repo
+source .venv/bin/activate
 
 # ✅ Step 5: Start Services
 
@@ -206,6 +208,11 @@ airflow scheduler
 ```
 
 UI: http://localhost:8080
+
+Start Both Terminal at one Go. 
+
+airflow webserver -p 8080 &
+airflow scheduler
 
 ------------------------------------------------------------------------
 
